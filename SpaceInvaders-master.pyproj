@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89f59526-958b-4684-9f8e-f00e7373a933}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>space_driver.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="NeuralEvolution\config.py" />
+    <Compile Include="NeuralEvolution\gene.py" />
+    <Compile Include="NeuralEvolution\innovation.py" />
+    <Compile Include="NeuralEvolution\neat.py" />
+    <Compile Include="NeuralEvolution\network.py" />
+    <Compile Include="NeuralEvolution\neuron.py" />
+    <Compile Include="NeuralEvolution\species.py" />
+    <Compile Include="NeuralEvolution\__init__.py" />
+    <Compile Include="SpaceInvaders\spaceinvaders.py" />
+    <Compile Include="space_driver.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SpaceInvaders\assets\a1_0.png" />
+    <Content Include="SpaceInvaders\assets\a1_1.png" />
+    <Content Include="SpaceInvaders\assets\a2_0.png" />
+    <Content Include="SpaceInvaders\assets\a2_1.png" />
+    <Content Include="SpaceInvaders\assets\a3_0.png" />
+    <Content Include="SpaceInvaders\assets\a3_1.png" />
+    <Content Include="SpaceInvaders\assets\shooter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NeuralEvolution" />
+    <Folder Include="SpaceInvaders" />
+    <Folder Include="SpaceInvaders\assets" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
